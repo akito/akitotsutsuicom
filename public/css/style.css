@@ -197,7 +197,7 @@ a:hover {
 .center {
   width: 100%;
   text-align: center;
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 .message {
   margin: 10px;
