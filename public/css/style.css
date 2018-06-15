@@ -129,21 +129,18 @@ a:hover {
   }
 }
 
-#nav-drawer {
-  /* position: relative; */
-}
-
+/* Hamburger menu */
 .nav-drawer{
   padding-top:20px;
   padding-left:20px;
 }
 
-/*チェックボックス等は非表示に*/
+/* Check box etc are not displayed */
 .nav-unshown {
   display:none;
 }
 
-/*アイコンのスペース*/
+/* Icon space */
 #nav-open {
   display: inline-block;
   width: 30px;
@@ -151,16 +148,17 @@ a:hover {
   vertical-align: middle;
 }
 
-/*ハンバーガーアイコンをCSSだけで表現*/
+/* Express hamburger icon */
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: absolute;
-  height: 3px;/*線の太さ*/
-  width: 25px;/*長さ*/
+  height: 3px;
+  width: 25px;
   border-radius: 3px;
   background: #555;
   display: block;
   content: '';
   cursor: pointer;
+  z-index: 9999;
 }
 #nav-open span:before {
   bottom: -8px;
@@ -169,12 +167,26 @@ a:hover {
   bottom: -16px;
 }
 
-/*閉じる用の薄黒カバー*/
+/*  hamburger icon transition */
+#nav-input:checked ~ #nav-open span {
+  -webkit-transform: translate3d(0, 8px, 0) rotate(-45deg);
+  transform: translate3d(0, 8px, 0) rotate(-45deg);
+}
+#nav-input:checked ~ #nav-open span:before {
+  -webkit-transform: translate3d(0, -8px, 0) rotate(0deg);
+  transform: translate3d(0, -8px, 0) rotate(0deg);
+}
+#nav-input:checked ~ #nav-open span:after {
+  -webkit-transform: translate3d(0, -16px, 0) rotate(90deg);
+  transform: translate3d(0, -16px, 0) rotate(90deg);
+}
+
+/* Light black cover for closing */
 #nav-close {
-  display: none;/*はじめは隠しておく*/
+  display: none;
   position: fixed;
   z-index: 99;
-  top: 0;/*全体に広がるように*/
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -183,35 +195,37 @@ a:hover {
   transition: .3s ease-in-out;
 }
 
-/*中身*/
+/* inside */
 #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;/*最大幅（調整してください）*/
+  /* z-index: 9999; */
+  z-index: 8888;
+  width: 90%;
+  max-width: 330px;
   height: 100%;
-  background: #fff;/*背景色*/
-  transition: .3s ease-in-out;/*滑らかに表示*/
+  background: #fff;
+  transition: .3s ease-in-out;
   -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/*左に隠しておく*/
+  transform: translateX(-105%);
   z-index: 100;
 }
 
-/*チェックが入ったらもろもろ表示*/
+/* When the check is entered */
 #nav-input:checked ~ #nav-close {
-  display: block;/*カバーを表示*/
+  display: block;
   opacity: .5;
 }
 
 #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
-  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  transform: translateX(0%);
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
+/* footer */
 .center {
   width: 100%;
   text-align: center;
