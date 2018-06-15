@@ -82,15 +82,6 @@ a:hover {
   height: 100%;
 }
 
-.footer {
-  text-align: right;
-  width: 100%;
-}
-
-.copyright {
-  margin-right: 60px;
-}
-
 @media screen and (min-width:1024px) {
   #nav-drawer {
     display:none;
@@ -118,15 +109,11 @@ a:hover {
   .main-wrap {
     margin: 60px 5px;
   }
-
   .footer {
     text-align: center;
     width: 100%;
   }
 
-  .copyright {
-    margin-right: 60px;
-  }
 }
 
 /* Hamburger menu */
@@ -225,7 +212,7 @@ a:hover {
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
-/* footer */
+/* 404page */
 .center {
   width: 100%;
   text-align: center;
