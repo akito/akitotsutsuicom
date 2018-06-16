@@ -3,7 +3,6 @@ jobs:
   deploy-job::
     docker:
       - image: circleci/node:7.10
-    working_directory: /tmp
     steps:
       - run:
           name: where
@@ -11,12 +10,6 @@ jobs:
       - run:
           name: list
           command: ls -la
-      - run:
-          name: install locate
-          command: apt-get install mlocate -y
-      - run:
-          name: find
-          command: locate 404-page.html
       - run:
           name: Deploy Master to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
