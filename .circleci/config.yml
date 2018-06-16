@@ -11,7 +11,7 @@ jobs:
       - run:
           name: list
           command: ls -la
-      -run:
+      - run:
           name: find
           command: find / -name 404-page.html
       - run:
