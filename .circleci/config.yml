@@ -3,11 +3,11 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:7.10
-    working_directory: /tmp/my-project
+    working_directory: /tmp
     steps:
       - run:
           name: Deploy Master to Firebase
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
