@@ -1,3 +1,3 @@
-Hi, my name is Akito Tsutsui living in Japan.
+Hi, I'm Akito Tsutsui.
 
 [akitotsutsui.com](https://akitotsutsui.com)
