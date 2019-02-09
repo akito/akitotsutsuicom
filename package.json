@@ -4,6 +4,7 @@
   "description": "Hi, my name is Akito Tsutsui living in Japan.",
   "main": "index.js",
   "dependencies": {
+    "cryptiles": "^4.1.3",
     "firebase-tools": "^6.3.1"
   },
   "devDependencies": {},
