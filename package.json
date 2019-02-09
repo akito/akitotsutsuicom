@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akitojp/my-profile-site.git"
+    "url": "git+https://github.com/akitojp/my-profile.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akitojp/my-profile-site/issues"
+    "url": "https://github.com/akitojp/my-profile/issues"
   },
-  "homepage": "https://github.com/akitojp/my-profile-site#readme"
+  "homepage": "https://github.com/akitojp/my-profile#readme"
 }
