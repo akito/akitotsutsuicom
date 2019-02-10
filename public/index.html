@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
   <!-- UIkit JS -->
@@ -15,11 +14,6 @@
 </head>
 
 <body>
-  <div class="uk-padding-small uk-hidden@l" uk-sticky="bottom: #top">
-    <a class="uk-link-text" uk-toggle="target: #offcanvas-overlay">
-      <span uk-navbar-toggle-icon></span>
-    </a>
-  </div>
   <div id="offcanvas-overlay" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
       <button class="uk-offcanvas-close" type="button" uk-close></button>
@@ -32,8 +26,13 @@
       </ul>
     </div>
   </div>
-  <div class="uk-section uk-padding-remove-bottom uk-padding-remove-top uk-background-secondary uk-light">
-    <div class="uk-container ">
+  <div class="uk-section uk-padding-remove-bottom uk-padding-remove-top uk-background-secondary">
+    <div class="uk-padding-small uk-hidden@l uk-background-none" uk-sticky="bottom: #top">
+      <a class="uk-link-text" uk-toggle="target: #offcanvas-overlay">
+        <span uk-navbar-toggle-icon class="uk-text-muted"></span>
+      </a>
+    </div>
+    <div class="uk-container uk-light">
       <div class="uk-hidden@l uk-padding-large">
         <a href="/">
           <h1 class="uk-heading-primary">Aktio Tsutsui</h1>
@@ -51,7 +50,7 @@
               Aktio Tsutsui
             </h1>
           </a>
-          <div class="uk-padding-small">
+          <div class="">
             <p>Hi, my name is Akito Tsutsui. I'm software engineer living in Japan.</p>
             <ul class="uk-list uk-link-heading">
               <li><a href="#skills">Skils</a></li>
@@ -78,23 +77,33 @@
           <h3 class="uk-heading-bullet">Coding</h3>
           <ul class="uk-list uk-list-bullet">
             <li>HTML</li>
-            <li>CSS(SASS/CCSS)</li>
-            <li>CSS Framework(Bootstrap/Uikit/Bruma/Materialize)</li>
+            <li>CSS ( SASS / CCSS )</li>
+            <li>CSS Framework: Bootstrap / Uikit / Bruma / Materialize</li>
           </ul>
           <h3 class="uk-heading-bullet">Infra</h3>
           <ul class="uk-list uk-list-bullet">
-            <li>OS: RHEL(CentOS) / SUSE / Ubuntu / Windows2016 / windows 2012R2 </li>
+            <li>OS: RHEL ( CentOS ) / SUSE / Ubuntu / Windows2016 / windows2012R2 </li>
+            <li>Middleware: Apache / Nginx / Tomcat / Heartbeat / DRDB / Corosync / Pacemaker</li>
             <li>Cloud: Azure / AWS / GCP / Heorku / Firebase</li>
             <li>Identity Management: Active Directory / Active Directory Federation Services</li>
             <li>Auth: Shibboleth-idp / Shibboleth-sp</li>
             <li>Monitoring: Zabbix</li>
-            <li>Tools: Docker, Ansible, Tmux</li>
-            <li>Shell: Fish, zsh, Bash</li>
+            <li>DevTools: Docker / Ansible / Tmux</li>
             <li>DB: MySQL / PostgreSQL / GraphSQL / LDAP</li>
-            <li>Network: Cisco / Netgear</li>
+            <li>Network: Cisco / Netgear / Aruba / AlaxalA / YAMAHA</li>
+          </ul>
+          <h3 class="uk-heading-bullet">Tools</h3>
+          <ul class="uk-list uk-list-bullet">
+            <li>OS: MacOS</li>
+            <li>Shell: The <a href="https://fishshell.com/" target="_blanck" rel="noopener noreferrer">fish shell</a>
+              is awesome.</li>
+            <li>Editor: Vim / RubyMine / VSCode</li>
           </ul>
           <h2 class="uk-heading-line" id="works"><span>Works</span></h2>
           <ul class="uk-list uk-list-bullet">
+            <li>
+              Development of C to C matching service
+            </li>
             <li>
               <a href="https://bitbucket.org/akitojp/potepanec/src/master/" target="_blank">Potepan E-Commerce</a>:
               reviwewr
@@ -103,9 +112,7 @@
               <a href="https://productstashme.herokuapp.com/" target="_blank"> Product Stash</a> : Own Product (not
               operated now)
             </li>
-            <li>
-              Development of C to C matching service
-            </li>
+
           </ul>
           <h2 class="uk-heading-line" id="contacts"><span>Contacts</span></h2>
           <ul class="uk-list uk-list-bullet">
@@ -132,5 +139,4 @@
     </div>
   </div>
 </body>
-
 </html>
